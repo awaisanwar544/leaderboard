@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import style from './main.css';
+import './main.css';
 import addScore from './modules/addScore.js';
 import addScoreUI from './modules/addScoreUI.js';
 import { gameID } from './modules/gameId.js';

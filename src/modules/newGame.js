@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import 'babel-polyfill';
 
 const newGame = async (url = '', data = {}) => {
