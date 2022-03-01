@@ -1,5 +1,4 @@
 import { newGameId } from './gameId.js';
-import populateScoreList from './populateScoreList.js';
 
 const createScore = async (url = '', data = {}) => {
   const response = await fetch(url, {
@@ -28,12 +27,9 @@ const addScore = async () => {
         user: nameField.value,
         score: Number(scoreField.value),
       };
-      createScore(SCORES_URL, scoreData)
-        .then(() => {
-          nameField.value = '';
-          scoreField.value = '';
-          populateScoreList();
-        });
+      nameField.value = '';
+      scoreField.value = '';
+      createScore(SCORES_URL, scoreData);
     }
   });
 };
