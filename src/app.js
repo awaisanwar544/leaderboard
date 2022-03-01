@@ -1,9 +1,15 @@
-// eslint-disable-next-line no-unused-vars
-import style from './main.css';
+import './main.css';
 import addScore from './modules/addScore.js';
-import scoresList from './modules/scoresList.js';
+import addScoreUI from './modules/addScoreUI.js';
+import { gameID } from './modules/gameId.js';
+import refreshBtn from './modules/refresh.js';
+import scoresListUI from './modules/scoresListUI.js';
 
-const main = document.getElementById('main');
-
-main.appendChild(scoresList());
-main.appendChild(addScore());
+window.onload = () => {
+  const main = document.getElementById('main');
+  main.appendChild(scoresListUI());
+  main.appendChild(addScoreUI());
+  gameID();
+  addScore();
+  refreshBtn();
+};
