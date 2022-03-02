@@ -21,9 +21,9 @@ const populateScoreList = () => {
   const list = document.querySelector('#scoreLis-ul');
   res.then((data) => {
     list.innerHTML = '';
-    data.result.sort((a, b) => (a.score < b.score ? 1 : -1)).forEach((item) => {
+    data.result.sort((a, b) => (a.score < b.score ? 1 : -1)).forEach((item, index) => {
       const li = document.createElement('li');
-      li.innerHTML = `${item.user}: ${item.score}`;
+      li.innerHTML = `<p class="index">${index + 1}</p> <p class="player">${item.user}</p> <p class="player player-score"> ${item.score}</p>`;
       list.appendChild(li);
     });
   });
