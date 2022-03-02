@@ -80,6 +80,7 @@ li {
   background-image: linear-gradient(to right, #ece9e671 0%, #ffffff75  51%, #ece9e66c  100%);
   border-radius: 1em;
   padding: 0.5em;
+  flex-grow: 1;
 }
 
 .index {
